@@ -41,7 +41,7 @@ public class Order {
         if (dish == null) {
             throw new IllegalArgumentException("Блюдо не может быть null");
         }
-        dishes.add(dish);
+        this.dishes.add(dish);
 
     }
 

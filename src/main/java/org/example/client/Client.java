@@ -64,5 +64,8 @@ public class Client {
         HttpURLConnection payConnection = (HttpURLConnection) payUrl.openConnection();
         payConnection.setRequestMethod("POST");
         System.out.println("Счет оплачен и стол освобожден.");
+
+
+
     }
 }
