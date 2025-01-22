@@ -9,15 +9,13 @@ public class Order {
     private static int orderCounter = 1;
 
     private int id;
-    private int tableNumber;  // Номер стола
-    private LocalDateTime orderTime;  // Время заказа
+    private int tableNumber;
     private List<Dish> dishes;  // Список блюд
     private boolean isCompleted;  // Статус заказа
 
     // Конструктор заказа, который автоматически получает номер стола
     public Order(int nextAvailableTable) {
         this.tableNumber = TableManager.getNextAvailableTable();  // Получаем номер стола автоматически
-        this.orderTime = LocalDateTime.now();
         this.dishes = new ArrayList<>();
         this.isCompleted = false;
         id = orderCounter++;
@@ -29,10 +27,6 @@ public class Order {
 
     public int getTableNumber() {
         return tableNumber;
-    }
-
-    public LocalDateTime getOrderTime() {
-        return orderTime;
     }
 
     public List<Dish> getDishes() {
